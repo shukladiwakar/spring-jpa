@@ -1,4 +1,4 @@
-package com.diwakar;
+package com.diwakar.dto;
 
 import com.diwakar.entity.User;
 import com.diwakar.repository.UserRepository;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class Userservice {
+public class UserDTO {
     @Autowired
     UserRepository userRepository;
 

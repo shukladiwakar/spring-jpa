@@ -1,5 +1,6 @@
 package com.diwakar;
 
+import com.diwakar.dto.UserDTO;
 import com.diwakar.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -12,7 +13,7 @@ import java.util.List;
 public class JPAApplication implements CommandLineRunner {
 
 	@Autowired
-	Userservice userservice;
+	UserDTO userDTO;
 
     public static void main(String[] args) {
         SpringApplication.run(JPAApplication.class, args);
@@ -21,7 +22,7 @@ public class JPAApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		System.out.println("Startting the application");
-		List<User> users = userservice.getUsers("Tate");
+		List<User> users = userDTO.getUsers("Tate");
 		for (User user : users) {
 			System.out.println(user.toString());
 		}
