@@ -1,6 +1,6 @@
 package com.diwakar;
 
-import com.diwakar.entity.Usertable;
+import com.diwakar.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -21,9 +21,9 @@ public class JPAApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		System.out.println("Startting the application");
-		List<Usertable> usertables = userservice.getUsers("Tate");
-		for(Usertable usertable : usertables){
-			System.out.println(usertable.toString());
+		List<User> users = userservice.getUsers("Tate");
+		for (User user : users) {
+			System.out.println(user.toString());
 		}
 	}
 }
