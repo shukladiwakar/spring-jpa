@@ -95,4 +95,11 @@ public class Usertable {
         this.company = company;
     }
 
+    @Override
+    public String toString() {
+        return String.format(
+                "User[id=%d, firstName='%s', lastName='%s',userid=%d,city='%s,country='%s',company='%s']",
+                id, firstName, lastName,userid,city,country,company);
+    }
+
 }
